@@ -1,0 +1,450 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body#bg-img{
+    background-image: url(../img/header-min.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+body{
+    background: #00121b;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  right: 0 ;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #444;
+  opacity: 0.7;
+}
+
+/* Headings  */
+h1, h2,h3{
+    margin: 0;
+    font-weight: 400;
+}
+
+.lg-heading{
+   font-size: 6rem;
+}
+
+.sm-heading{
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: #f0f8ff;
+    color: #000;
+}
+
+/* The header styles */
+header{
+    position:fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary{
+    color: #eece1a;
+}
+
+main{
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+}
+
+.icons{
+    margin-top: 1rem;
+}
+
+.icons a{
+    padding: 0.4rem;
+} 
+.icons a:hover{
+    color:#eece1a;
+    transition: all 1.5s ease-out;
+} 
+
+/* the #home styles */
+#home{
+    overflow: hidden;
+}
+#home h1{
+    margin-top:20vh;
+}
+
+
+
+/* Menu styles */
+
+.menu-btn{
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;  
+    cursor: pointer;
+    /* transition: #eece1a 1.5s ease-out; */
+}
+
+.btn-line{
+    width: 28px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: #fff;
+    
+}
+.btn-line:hover{
+    color:#eece1a;
+    transition: all 1.5s ease-out;
+}
+
+.menu{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+.menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+ }
+ 
+ .menu-nav{
+     margin: 0;
+     padding: 0;
+     background:#2f2f2f;
+     list-style: none;
+     transform: translate3d(0, -100%, 0);
+     transition: all 0.5s ease-out;
+ }
+
+ .menu-nav.show{
+    transform: translate3d(0, 0, 0);
+ }
+ .menu-branding{
+    margin: 0;
+    padding: 0;
+    background:#444;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out;
+ }
+ .menu-branding.show{
+    transform: translate3d(0, 0, 0);
+ }
+
+ .portrait{
+     width:300px;
+     height: 300px;
+     background-image: url('../img/silvi.jpg');
+     border-radius: 50%;
+     border: solid 3px #eece1a;
+ }
+ .nav-item{
+     display: inline-block;
+     position: relative;
+     font-size: 25px;
+     padding: 5px;
+     text-transform: uppercase;
+     font-weight: 400;
+     text-decoration: none;
+ }
+ .nav-item a:hover{
+     color:  #eece1a;
+     transition: all 0.5s ease-out;
+ }
+ .current a{
+     color: #eece1a;
+ }
+/* End of menu styles */
+
+
+
+
+
+
+ /* About Styles */
+.about-info{
+    display: grid;
+    /* grid-gap: 10px; */
+    grid-template-areas:
+    'bioimage bio';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.bio-image{
+    grid-area: bioimage;
+    margin: auto;
+
+}
+.bio{
+    grid-area: bio;
+    grid-row: 1/3;
+}
+.bio h3{
+    font-size: 40px;
+    font-weight: 400px;
+}
+.my-skills{
+    padding: 5px;
+}
+.skills{
+    text-align: right;
+    padding: 3px;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.skills.php{
+    background: #fff;
+    width: 90%;
+}
+.skills.LARAVEL{
+    background: #fff;
+    width: 75%;
+}
+.skills.JAVA{
+    background: #fff;
+    width: 70%;
+}
+.skills.SPRING-BOOT{
+    background: #fff;
+    width: 70%;
+}
+.skills.JS{
+    background: #fff;
+    width: 60%;
+}
+.skills.REACT{
+    background: #fff;
+    width: 50%;
+}
+
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    background: #2f2f2f;
+    height: 60px;
+}
+/* End of about styles */
+
+
+
+
+
+
+
+
+/* Work styles */
+
+.projects{
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.projects img{
+   width: 100%;
+   border: 5px solid #fff;
+}
+.projects img:hover{
+     opacity: 0.5;
+     border-color:#eece1a;
+ }
+/* End of work styles */
+
+
+/* Contact styles */
+.contact-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-section form{
+   display: grid;
+   grid-template-columns: 1fr; 
+   margin: 5px 0 5px 0;
+}
+.contact-section input, textarea{
+    padding: 8px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #fff;
+    font-size: 17px;
+    color: #fff;
+}
+.contact-section input:focus{
+    color: #fff;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #eece1a;
+}
+.contact-section textarea:focus{
+    color: #fff;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #eece1a;
+}
+.contact-section label{
+    display: block;
+    margin: 5px 0 5px 0;
+}
+.contact-section p{
+    margin: 0;
+}
+
+.btn-submit{
+    position: relative;
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 10px;
+    background: #eece1a;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500px;
+    border: none;
+    width: 30%;
+    
+
+}
+/* End of contact styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive styles */
+/* Extra large screen */
+@media screen and (max-width:1171px){
+    
+}
+  /* Large screen */
+@media screen and (min-width:769px)and(max-width:1170px){
+     
+}
+
+
+
+ /* Medium screen */
+@media screen and (max-width: 768px){
+    main {
+        align-items:center;
+        text-align: center;
+    
+    }
+    .lg-heading{
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+
+    ul.menu-nav, div.menu-branding{
+        float: none;
+        width: 100%;
+        min-height: 0;
+    }
+    .menu-nav, div.menu-branding .show{
+      transform: translate3d(0,0,0);
+    }
+    .menu-nav{
+        height: 75vh;
+        transform: translate3d(-100%, 0,0);
+        font-size: 24px;
+    }
+    .menu-branding{
+        height: 25vh;
+        transform: translate3d(100%, 0,0);
+
+    }
+    .portrait{
+        width: 150px;
+        height: 150px;
+        background-image: url('../img/silvi-min.jpg');
+    }
+
+
+    /* About Styles */
+    .about-info{
+       grid-template-columns: 1fr 2fr;
+   }
+
+   .bio{
+       grid-row: 1/4;
+   }
+   /* End of about styles */
+
+   .projects{
+       grid-template-columns: repeat(2, 1fr);
+
+   }
+
+}
+
+/* Mobile screen */
+@media screen and (max-width:500px)
+{
+    main#home h1{
+        margin-top: 10vh;
+    }
+
+
+    /* About Responsive Styles */
+    .about-info{
+        grid-template-columns: 1fr;
+    }
+    .bio{
+        grid-row: 1/4;
+    }
+    /* End of about respnsive styles */
+
+    /* Work responsive styles */
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    /* End of work responsive styles */
+}
+ 
+
+
+
+
+
+
